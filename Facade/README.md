@@ -11,6 +11,7 @@ estabelecer uma conexão como a BaseDeDados receber uma instância de uma
 classe Conexão e a partir da Conexão efetuar as operações desejadas. Forneça uma
 solução utilizando padrões que simplifique a interação do Cliente com as demais
 classes deste subsistema;
+
 - Exercício 2: Suponha que você deseja construir seu proprio home theater. O sistema contém
 uma TV, um som sorround, aparelhagem de DVD e um sintonizador para TV a cabo
 ou canais abertos. A TV tem as opções de ligar, desligar, controle de volume e
