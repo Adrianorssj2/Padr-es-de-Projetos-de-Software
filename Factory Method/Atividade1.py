@@ -10,13 +10,13 @@ class DocumentFactory(ABC):
     def create_document(self, file_type: str) -> Document:
         pass
 
-class TXT(Document):
+class PDF(Document):
     def load(self):
-        print("Carregando um documento de texto.")
+        print("Carregando um documento PDF.")
 
-class PNG(Document):
+class word(Document):
     def load(self):
-        print("Carregando um documento do tipo imagem.")
+        print("Carregando um documento Word.")
 
 class HTML(Document):
     def load(self):
@@ -24,10 +24,10 @@ class HTML(Document):
 
 class ConcreteDocumentFactory(DocumentFactory):
     def create_document(self, file_type: str) -> Document:
-        if file_type == "txt":
-            return TXT()
-        elif file_type == "png":
-            return PNG()
+        if file_type == "PDF":
+            return PDF()
+        elif file_type == "word":
+            return word()
         elif file_type == "html":
             return HTML()
         else:
@@ -36,8 +36,8 @@ class ConcreteDocumentFactory(DocumentFactory):
 def main():
     document_factory = ConcreteDocumentFactory()
 
-    pdf = document_factory.create_document("txt")
-    word = document_factory.create_document("png")
+    pdf = document_factory.create_document("PDF")
+    word = document_factory.create_document("word")
     html = document_factory.create_document("html")
 
     pdf.load()
